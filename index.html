@@ -15,33 +15,34 @@
                 Some fields are missing
             </div>
             <form>
-        
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="card-number" class="form-label">Card #</label>
-                        <input type="text" class="form-control" id="card-number" placeholder="XXXXXXXXXXXXXXXX">
+                        <input type="number" class="form-control" id="card-number" placeholder="XXXXXXXXXXXXXXXX" 
+                               inputmode="numeric" pattern="[0-9]*" maxlength="16">
                     </div>
                     <div class="col-md-3">
                         <label for="cvc" class="form-label">CVC #</label>
-                        <input type="text" class="form-control" id="cvc" placeholder="0000">
+                        <input type="number" class="form-control" id="cvc" placeholder="0000" 
+                               inputmode="numeric" pattern="[0-9]*" maxlength="4">
                     </div>
                     <div class="col-md-3">
-                        <label for="amount" class="form-label">Amount</label>
+                        <label for="amount" class="form-label">$Amount</label>
                         <input type="text" class="form-control" id="amount" placeholder="$ Amount">
                     </div>
                 </div>
-                
+
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="first-name" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="first-name" >
+                        <input type="text" class="form-control" id="first-name">
                     </div>
                     <div class="col-md-6">
                         <label for="last-name" class="form-label">Last Name</label>
                         <input type="text" class="form-control" id="last-name">
                     </div>
                 </div>
-               
+            
                 <div class="row mb-3">
                     <div class="col-md-4">
                         <label for="city" class="form-label">City</label>
@@ -51,9 +52,9 @@
                         <label for="state" class="form-label">State</label>
                         <select class="form-select" id="state">
                             <option selected>Pick a state</option>
-                            <option>California</option>
-                            <option>New York</option>
-                            <option>Texas</option>
+                            <option value="CA">California</option>
+                            <option value="NY">New York</option>
+                            <option value="TX">Texas</option>
                         </select>
                     </div>
                     <div class="col-md-4">
@@ -61,26 +62,26 @@
                         <input type="text" class="form-control" id="postal-code">
                     </div>
                 </div>
-                
+       
                 <div class="row mb-3 align-items-center">
                     <div class="col-md-4">
                         <label class="form-label">We accept:</label>
                         <div class="btn-group" role="group" aria-label="Payment options">
                             <label class="btn btn-secondary">
                                 <input type="radio" name="payment-method" id="visa" autocomplete="off">
-                                <i class="fab fa-cc-visa me-2"></i>
+                                <i class="fab fa-cc-visa me-2"></i>Visa
                             </label>
                             <label class="btn btn-secondary">
                                 <input type="radio" name="payment-method" id="mastercard" autocomplete="off">
-                                <i class="fab fa-cc-mastercard me-2"></i>
+                                <i class="fab fa-cc-mastercard me-2"></i>MasterCard
                             </label>
                             <label class="btn btn-secondary">
                                 <input type="radio" name="payment-method" id="amex" autocomplete="off">
-                                <i class="fab fa-cc-amex me-2"></i>
+                                <i class="fab fa-cc-amex me-2"></i>Amex
                             </label>
                             <label class="btn btn-secondary">
                                 <input type="radio" name="payment-method" id="discover" autocomplete="off">
-                                <i class="fab fa-cc-discover me-2"></i>
+                                <i class="fab fa-cc-discover me-2"></i>Discover
                             </label>
                         </div>
                     </div>
@@ -89,7 +90,7 @@
                         <textarea class="form-control" id="message" rows="2" placeholder="Add any notes here."></textarea>
                     </div>
                 </div>
-               
+      
                 <div class="row">
                     <div class="col-12 d-flex justify-content-end">
                         <button type="button" class="btn btn-secondary me-2">Cancel</button>
@@ -103,6 +104,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
